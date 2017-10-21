@@ -8,9 +8,10 @@ INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-SET(HEADERS
+SET(APREPRO_HEADERS
   aprepro.h
 )
+
 
 SET(SOURCES
  apr_aprepro.cc 
@@ -23,7 +24,8 @@ SET(SOURCES
  apr_scanner.cc  
  apr_getline_int.c
  apr_array.cc
+ apr_parser.cc
 )
 
-add_library(aprepro_lib ${HEADERS} ${SOURCES})
-
+add_library(aprepro_lib SHARED ${APREPRO_HEADERS} ${SOURCES})
+install(TARGETS aprepro_lib DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)

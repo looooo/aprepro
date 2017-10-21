@@ -1,0 +1,10 @@
+package:
+    name: aprepro
+    version: 4.34
+
+build:
+    number: 0   
+
+requirements:
+    build:
+        - cmake  # [unix]
