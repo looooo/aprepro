@@ -1,0 +1,15 @@
+INCLUDE_DIRECTORIES(
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}
+)
+
+SET(SOURCES
+	aprepro.C
+)
+
+ADD_EXECUTABLE(
+	aprepro
+	SOURCES ${SOURCES}
+)
+
+install_executable(aprepro)
